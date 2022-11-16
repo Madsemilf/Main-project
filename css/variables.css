@@ -1,0 +1,17 @@
+:root {
+	--primary-color: white;
+	--secondary-color: black;
+	--header-color: rgb(204, 150, 150);
+	--header-nav-color: rgb(255, 210, 217);
+
+	--font-size-large: 1.5rem;
+	--font-size-small: 0.5rem;
+}
+
+.dark-mode {
+	--primary-color: black;
+	--secondary-color: white;
+	--header-color: rgb(38, 38, 38);
+	--header-nav-color: rgb(61, 61, 61);
+
+}
