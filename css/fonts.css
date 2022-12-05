@@ -1,9 +1,9 @@
 @font-face {
-	font-family: MomcakeThin;
-	src: url("../assets/fonts/MomcakeThin.otf") format("opentype");
+	font-family: MomcaThin;
+	src: url("../assets/fonts/MomcaThin.otf") format("opentype");
 }
 
 @font-face {
-	font-family: MomcakeBold;
-	src: url("../assets/fonts/MomcakeBold.otf") format("opentype");
+	font-family: MomcaBold;
+	src: url("../assets/fonts/MomcaBold.otf") format("opentype");
 }

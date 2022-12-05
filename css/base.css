@@ -1,11 +1,11 @@
 body {
-	font-family: MomcakeThin;
+	font-family: "MomcaThin", serif;
 	font-size: 40px;
-	background-color: var(--primary-color);
+	background-color: var(--primary-text-color);
 }
 
 a {
-	color: var(--secondary-color);
+	color: var(--secondary-text-color);
 	text-decoration: none;
 }
 

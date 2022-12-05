@@ -2,9 +2,13 @@ main {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
-	background-color: var(--header-color);
+	background-color: var(--primary-color);
 }
 
+h1 {
+	text-align: center;
+	color: var(--secondary-text-color);
+}
 .slideshow__container {
 	width: 100%;
 	height: 70vh;
@@ -12,6 +16,12 @@ main {
   	position: relative;
   	overflow: hidden;
 	margin-top: 10%;
+}
+
+@media screen and (max-width: 675px) {
+	.slideshow__container {
+		margin-top: 20%;
+	}
 }
 
 .slideshow__image {
@@ -26,6 +36,12 @@ main {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+	.slideshow__image img {
+		object-fit: contain;
+	}
 }
 
 .slideshow__button-next,

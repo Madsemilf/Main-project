@@ -3,7 +3,7 @@ export default function DarkTheme() {
 	let isDarkTheme = false;
 	
 	// query selectors
-	const darkThemeButton = document.querySelector('.header__dark-button');
+	const darkThemeButton = document.querySelector('.header__darktheme-button');
 
 	if (darkThemeButton !== null) {
 		darkThemeButton.addEventListener('click', handleDarkThemeClick);
@@ -28,10 +28,10 @@ export default function DarkTheme() {
 	function renderHTML() {
 		if (isDarkTheme) {
 			darkThemeButton.innerText = 'Light theme';
-			document.body.classList.add('dark-mode');
+			document.body.classList.add('dark-theme');
 		} else {
 			darkThemeButton.innerText = 'Dark theme';
-			document.body.classList.remove('dark-mode');
+			document.body.classList.remove('dark-theme');
 		}
 	}
 }

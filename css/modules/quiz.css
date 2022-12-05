@@ -6,11 +6,11 @@
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--header-color);
+	background-color: var(--primary-color);
 }
 
 main.correct {
-	--hue: var(--primary-color);
+	--hue: var(--primary-text-color);
 }
 
 main.wrong {
@@ -20,7 +20,7 @@ main.wrong {
 .container {
 	width: 800px;
 	max-width: 80%;
-	background-color: var(--header-nav-color);
+	background-color: var(--secondary-color);
 	border-radius: 5px;
 	padding: 10px;
 	box-shadow: 0 0 10px 2px;
@@ -34,9 +34,9 @@ main.wrong {
 }
 
 .btn {
-	background-color: var(--header-color);
-	/* border: 1px solid hsl(var(--primary-color), 100%, 30%); */
-	/* background-color: hsl(var(--primary-color), 100%, 50%); */
+	background-color: var(--primary-color);
+	/* border: 1px solid hsl(var(--primary-text-color), 100%, 30%); */
+	/* background-color: hsl(var(--primary-text-color), 100%, 50%); */
 	border-radius: 5px;
 	padding: 5px 10px;
 	color: black;
@@ -44,7 +44,7 @@ main.wrong {
 }
 
 .btn:hover {
-	border-color: var(--primary-color);
+	border-color: var(--primary-text-color);
 }
 
 .btn.correct {
@@ -53,7 +53,7 @@ main.wrong {
 }
 
 .btn.wrong {
-	--hue: var(--primary-color);
+	--hue: var(--primary-text-color);
 }
 
 .start-btn, .next-btn {

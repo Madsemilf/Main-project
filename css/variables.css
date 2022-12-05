@@ -1,8 +1,8 @@
 :root {
-	--primary-color: white;
-	--secondary-color: black;
-	--header-color: rgb(204, 150, 150);
-	--header-nav-color: rgb(255, 210, 217);
+	--primary-text-color: white;
+	--secondary-text-color: black;
+	--primary-color: rgb(204, 150, 150);
+	--secondary-color: rgb(255, 210, 217);
 
 	--font-size-large: 1.5rem;
 	--font-size-small: 0.5rem;
@@ -10,10 +10,10 @@
 	--wrong-answer: red;
 }
 
-.dark-mode {
-	--primary-color: rgb(37, 37, 37);
-	--secondary-color: rgb(202, 202, 202);
-	--header-color: rgb(38, 38, 38);
-	--header-nav-color: rgb(61, 61, 61);
+.dark-theme {
+	--primary-text-color: rgb(37, 37, 37);
+	--secondary-text-color: rgb(202, 202, 202);
+	--primary-color: rgb(38, 38, 38);
+	--secondary-color: rgb(61, 61, 61);
 
 }
