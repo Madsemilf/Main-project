@@ -6,11 +6,13 @@
 
 	--font-size-large: 1.5rem;
 	--font-size-small: 0.5rem;
+
+	--wrong-answer: red;
 }
 
 .dark-mode {
-	--primary-color: black;
-	--secondary-color: white;
+	--primary-color: rgb(37, 37, 37);
+	--secondary-color: rgb(202, 202, 202);
 	--header-color: rgb(38, 38, 38);
 	--header-nav-color: rgb(61, 61, 61);
 

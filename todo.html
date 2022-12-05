@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Modules</title>
+
+		<link rel="stylesheet" href="./css/main.css">
+		<script type="module" src="./js/main.js"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<button class="header__menu-button">
+				<div class="header__menu-button--text">Meny</div>
+			</button>
+			<button class="header__dark-button">
+				
+			</button>
+
+			<nav class="header__navigation">
+				<menu class="header__navigation-menu">
+					<li><a href="./home.html" target="_blank"">Home</a></li>
+					<li><a href="./quiz.html" target="_blank"">Quiz</a></li>
+					<li><a href="./todo.html" target="_blank">To-do</a></li>
+				</menu>
+			</nav>
+		</header>
+
+
+		<section class="todo">
+			<div class="todo__header">
+				To-Do List
+			</div>
+			<!-- input table -->
+			<div>
+				<input placeholder="Enter Task" class="todo__input">
+
+				<button class="todo__input-button">SUBMIT</button>
+			</div>
+
+					<!-- output table -->
+			<table id="new-task" class="todo__table">
+				<thead>
+					<tr>
+						<th class="todo__table-task">Task</th>
+						<th class="todo__table-status">Status</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					 </tr>
+				</thead>
+
+				<tbody>
+					<!-- <tr>
+						<td>Gjøre masse greier</td>
+						<td>Done</td>
+						<td>
+							<button>
+								Edit	<i class="fa-solid fa-pen"></i>
+							</button>
+						</td>
+						<td>
+							<button>
+								Delete <i class="fa-solid fa-pen"></i>
+							</button>
+						</td>
+					 </tr> -->
+				</tbody>
+			</table>
+			<!-- <table class="todo__table-header">
+				<thead>
+					<tr class="todo__table-row">
+						<th class="todo__table-row--task">Task</th>
+						<th class="todo__table-row--status">Status</th>
+						<th class="todo__table-row--index">#</th>
+						<th class="todo__table-row--delete">#</th>
+					</tr>
+				</thead>
+
+				<tbody id="newTask" class="todo__table-body">
+					<tr class="todo__table-row">
+						<td class="todo__table-data--task">test</td>
+						<td class="todo__table-data--status">test</td>
+						<td class="todo__table-data--index">f
+						</td>
+						<td class="todo__table-data--delete">
+							<div class="todo__table-data--delete">
+								<span class="fa fa-trash">t</span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table> -->
+		</section>
+
+
+		<!-- <footer class="footer">
+			<div>Subscribe to our newsletter</div> 
+
+			<input class="footer__input" type="text" placeholder="Enter email address">
+
+			<button class="footer__button" type="submit" value="Submit">Submit</button>
+		</footer> -->
+	</body>
+</html>

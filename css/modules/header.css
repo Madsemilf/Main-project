@@ -2,6 +2,7 @@
 	background: var(--header-color);
 	position: relative;
 	height: 5rem;
+	border-bottom: 1px solid var(--secondary-color);
 }
 
 /* @media screen and (max-width: 768px) {
@@ -12,7 +13,7 @@
 
 .header__menu-button {
 	height: 3rem;
-	width: 7rem;
+	width: 5rem;
 	position: absolute;
 	right: 5%;
 	top: 50%;
@@ -27,39 +28,42 @@
 
 .header__dark-button {
 	height: 3rem;
-	width: 15rem;
-	background: var(--header-color);
+	width: 10rem;
 	position: absolute;
 	right: 20%;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 2rem;
-	border-radius: 10%;
 	font-weight: 700;
 	color: var(--secondary-color);
-}
-
-.header__nav {
-	position: absolute;
-	width: 100%;
-	top: 5rem;
+	margin-right: 5px;
 }
 
 .header__navigation {
+	position: absolute;
+	width: 100%;
+	top: 5rem;
+	height: 5rem;
+	z-index: 100;
+}
+
+.header__navigation-menu {
 	display: none;
 }
 
-.header__navigation li {
+.header__navigation-menu li {
 	margin: 1rem;
 }
 
-.header__navigation--visible {
+.header__navigation-menu--visible {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	animation: growDown 1.5s ease;
    transform-origin: top center;
 	background: var(--header-nav-color);
+	border-bottom: 1px solid var(--secondary-color);
+
 }
 
 @keyframes growDown {
@@ -72,9 +76,8 @@
 }
 
 
-
 /* @media screen and (max-width: 768px) {
-	.header__navigation {
+	.header__navigation-menu {
 		background: blue;
 		font-size: 20px;
 	}

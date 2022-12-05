@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Main Project: all i know</title>
+
+		<link rel="stylesheet" href="./css/main.css">
+		<script type="module" src="./js/main.js"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<button class="header__menu-button">
+				<div class="header__menu-button--text">Meny</div>
+			</button>
+			<button class="header__dark-button"></button>
+
+			<nav class="header__navigation">
+				<menu class="header__navigation-menu">
+					<li><a href="./home.html" target="_blank"">Home</a></li>
+					<li><a href="./quiz.html" target="_blank"">Quiz</a></li>
+					<li><a href="./todo.html" target="_blank">To-do</a></li>
+				</menu>
+			</nav>
+		</header>
+
+		<main class="quiz__center">
+			<div class="container">
+				<div id="question-container" class="hide">
+				<div id="question">Question</div>
+				<div id="answer-buttons" class="btn-grid">
+					<button class="btn">Answer 1</button>
+					<button class="btn">Answer 2</button>
+					<button class="btn">Answer 3</button>
+					<button class="btn">Answer 4</button>
+				</div>
+				</div>
+				<div class="controls">
+					<button id="start-btn" class="start-btn btn">Start</button>
+					<button id="next-btn" class="next-btn btn hide">Next</button>
+				</div>
+			</div>
+		</main>
+	
+		
+
+		<!-- <footer class="footer">
+			<div>Subscribe to our newsletter</div> 
+
+			<input class="footer__input" type="text" placeholder="Enter email address">
+
+			<button class="footer__button" type="submit" value="Submit">Submit</button>
+		</footer> -->
+	</body>
+</html>

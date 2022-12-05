@@ -1,5 +1,11 @@
 import Header from "./modules/header.js";
-import Darkmode from "./modules/darkmode.js";
+import DarkTheme from "./modules/DarkTheme.js";
+import Quizdos from "./modules/quizdos.js";
+import Slideshow from "./modules/slideshow.js";
+import Todo from "./modules/todo.js";
 
 Header();
-Darkmode();
+DarkTheme();
+// Quizdos();
+Slideshow();
+Todo();
