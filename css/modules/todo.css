@@ -86,24 +86,23 @@ td, th {
 	border: 1px solid var(--secondary-text-color);
 	text-align: left;
 	padding: 8px;
-	font-size: 1rem;
- }
-
- .todo__table-task {
-	width: 70%;
- }
-
- .todo__table-status {
-	width: 25%;
- }
-
- .table__delete-button, .table__edit-button {
-	text-align: center;
-	padding: 5px;
 	font-size: 1.5rem;
  }
 
- .todo__task--done .todo__task-text {
+.todo__table-task {
+	width: 85%;
+ }
+
+.todo__table-status, .todo__table-delete {
+	text-align: center;
+}
+
+.table__delete-button, .table__edit-button {
+	text-align: center;
+	padding: 3px;
+ }
+
+.todo__task--done .todo__task-text {
 	color: red;
 	text-decoration: line-through;
 }
