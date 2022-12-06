@@ -65,7 +65,7 @@ export default function Todo() {
 		storeTasksLocally();
 	}
 
-	// removes or "splices" task from table and stores in in local storage.
+	// removes or "splices" task from table and stores changes in local storage.
 	function deleteTask(index) {
 		tasks.splice(index, 1);
 
@@ -79,7 +79,7 @@ export default function Todo() {
 	}
 
 	// Converts values (tasks) to string.
-	// 
+	// Puts them in key value pairs in local storage.
 	function storeTasksLocally() {
 		const key = 'todo-list';
 		const value = JSON.stringify(tasks);
@@ -102,10 +102,9 @@ export default function Todo() {
 		}
 	}
 	/**
-	 * 
-	 * @param {*} task 
-	 * @param {*} index 
-	 * @returns 
+	 * Creates table and button elements and puts them in the DOM.
+	 * Gives elements a class and "attaches" elements to their respected parent node.
+	 * Gives buttons text and conditional statement to the status button (we check if the task is done; True or False).
 	 */
 	function addTodoElementsToDOM(task, index) {
 		const taskElement = document.createElement('tr');
