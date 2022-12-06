@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Quiz-app</title>
+		<title>Quiz App</title>
 
 		<link rel="stylesheet" href="./css/main.css">
 		<script type="module" src="./js/main.js"></script>
@@ -25,20 +25,17 @@
 			</nav>
 		</header>
 
-		<main class="quiz__center">
-			<section class="container">
-				<div id="question-container" class="hide">
-				<div id="question">Question</div>
-				<div id="answer-buttons" class="btn-grid">
-					<button class="btn">Answer 1</button>
-					<button class="btn">Answer 2</button>
-					<button class="btn">Answer 3</button>
-					<button class="btn">Answer 4</button>
+		<main class="quiz">
+			<section class="quiz__container">
+				<div class="quiz__questions"></div>
+				<div>
+					<button>Answer 1</button>
+					<button>Answer 2</button>
+					<button>Answer 3</button>
+					<button>Answer 4</button>
 				</div>
-				</div>
-				<div class="controls">
-					<button id="start-btn" class="start-btn btn">Start</button>
-					<button id="next-btn" class="next-btn btn hide">Next</button>
+				<div class="quiz__button">
+					<button class="quiz__next-button">Next</button>
 				</div>
 			</section>
 		</main>
