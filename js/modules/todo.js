@@ -9,7 +9,7 @@ export default function Todo() {
 
 	if (todoTasksContainer) {
 		todoAddButton.addEventListener('click', handleTodoAddButtonClick);
-		document.addEventListener('keydown', handleTodoAddButtonEvent);
+		window.addEventListener('keydown', handleTodoAddButtonEvent);
 	}
 
 	function handleTodoAddButtonEvent(event) {
