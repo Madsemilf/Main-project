@@ -2,7 +2,7 @@ export default function DarkTheme() {
 	// data aka. "model"
 	let isDarkTheme = false;
 	
-	// query selectors
+
 	const darkThemeButton = document.querySelector('.header__darktheme-button');
 
 	if (darkThemeButton !== null) {
