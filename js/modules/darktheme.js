@@ -26,6 +26,24 @@ export default function DarkTheme() {
 		isDarkTheme = !isDarkTheme;
 	}
 
+	function storeDarkThemeLocally() {
+		const key = 'dark-theme';
+		const value = JSON.stringify(isDarkTheme);
+		 
+		window.localStorage.setItem(key, value);
+	}
+
+	function getDarkThemeLocally() {
+		const key = 'dark-theme';
+		const darkThemeAsString = window.localStorage.getItem(key);
+
+		if (darkThemeAsString) {
+			return JSON.parse(darkThemeAsString);
+		} else {
+			return [];
+		}
+	}
+
 	function renderHTML() {
 		if (isDarkTheme) {
 			darkThemeButton.innerText = 'Light theme';
@@ -36,28 +54,6 @@ export default function DarkTheme() {
 		}
 
 		storeDarkThemeLocally();
-	}
-
-	function storeDarkThemeLocally() {
-		const key = 'dark-theme';
-		const value = JSON.stringify(isDarkTheme);
-		 
-		window.localStorage.setItem(key, value);
-	}
-
-	/**
-	 * 	Returns the parsed array stored locally, otherwise an empty array
-	 * 	If nothing has been stored
-	 */
-	function getDarkThemeLocally() {
-		const key = 'dark-theme';
-		const darkThemeAsString = window.localStorage.getItem(key);
-
-		if (darkThemeAsString) {
-			return JSON.parse(darkThemeAsString);
-		} else {
-			return [];
-		}
 	}
 }
 
