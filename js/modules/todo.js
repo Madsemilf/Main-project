@@ -9,10 +9,10 @@ export default function Todo() {
 
 	if (todoTasksContainer) {
 		todoAddButton.addEventListener('click', handleTodoAddButtonClick);
-		window.addEventListener('keydown', handleTodoAddButtonEvent);
+		window.addEventListener('keydown', handleWindowKeyEnter);
 	}
 
-	function handleTodoAddButtonEvent(event) {
+	function handleWindowKeyEnter(event) {
 		if (event.keyCode === 13) {
 			addNewTask();
 			renderHTML();
