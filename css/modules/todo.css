@@ -97,7 +97,7 @@ td, th {
 	text-align: center;
 }
 
-.table__delete-button, .table__edit-button {
+.table__delete-button, .table__status-button {
 	text-align: center;
 	padding: 3px;
  }

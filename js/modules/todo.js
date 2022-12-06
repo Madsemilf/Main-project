@@ -12,6 +12,7 @@ export default function Todo() {
 		window.addEventListener('keydown', handleWindowKeyEnter);
 	}
 
+	// Inputs new task with the "enter" key.
 	function handleWindowKeyEnter(event) {
 		if (event.keyCode === 13) {
 			addNewTask();
@@ -47,6 +48,8 @@ export default function Todo() {
 		renderHTML();
 	}
 	
+	// Pushes the value in input field to the todo table.
+	// If enter value = '' it alerts the person concerned.
 	function addNewTask() {
 		const currentInput = todoAddInput.value;
 		
@@ -62,6 +65,7 @@ export default function Todo() {
 		storeTasksLocally();
 	}
 
+	// removes or "splices" task from table and stores in in local storage.
 	function deleteTask(index) {
 		tasks.splice(index, 1);
 
@@ -74,6 +78,8 @@ export default function Todo() {
 		storeTasksLocally();
 	}
 
+	// Converts values (tasks) to string.
+	// 
 	function storeTasksLocally() {
 		const key = 'todo-list';
 		const value = JSON.stringify(tasks);
@@ -82,8 +88,8 @@ export default function Todo() {
 	}
 
 	/**
-	 * 	returns the parsed array stored locally, otherwise an empty array
-	 * 	if nothing has been stored
+	 * 	Returns the parsed array stored locally, otherwise an empty array
+	 * 	If nothing has been stored
 	 */
 	function getTasksLocally() {
 		const key = 'todo-list';
@@ -95,7 +101,12 @@ export default function Todo() {
 			return [];
 		}
 	}
-	
+	/**
+	 * 
+	 * @param {*} task 
+	 * @param {*} index 
+	 * @returns 
+	 */
 	function addTodoElementsToDOM(task, index) {
 		const taskElement = document.createElement('tr');
 		const taskElementText = document.createElement('td');
@@ -118,7 +129,7 @@ export default function Todo() {
 		taskElementDeleteButton.innerText = 'Delete';
 		taskElementStatusButton.innerText = task.done === true ? 'Undo!' : 'Done';
 
-		taskElementStatusButtonRow.className = 'table__edit-button'
+		taskElementStatusButtonRow.className = 'table__status-button'
 		taskElementDeleteButtonRow.className = 'table__delete-button'
 
 		taskElementDeleteButton.addEventListener('click', handleTaskDeleteButtonClick);
@@ -126,9 +137,6 @@ export default function Todo() {
 		
 		taskElementStatusButtonRow.appendChild(taskElementStatusButton);
 		taskElementDeleteButtonRow.appendChild(taskElementDeleteButton);
-
-
-		
 
 		taskElement.appendChild(taskElementText);
 		taskElement.appendChild(taskElementStatusButtonRow);
