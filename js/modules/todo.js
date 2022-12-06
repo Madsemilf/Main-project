@@ -9,7 +9,10 @@ export default function Todo() {
 
 	if (todoTasksContainer) {
 		todoAddButton.addEventListener('click', handleTodoAddButtonClick);
+		todoAddButton.addEventListener('enter', handleTodoAddButtonEvent);
 	}
+
+	
 	
 	function handleTodoAddButtonClick(event) {
 		addNewTask();
@@ -47,9 +50,18 @@ export default function Todo() {
 				text: currentInput,
 				done: false
 			});
+		} else {
+			alert('Please enter a task')
 		}
 
 		storeTasksLocally();
+	}
+
+	function handleTodoAddButtonEvent(event) {
+		if (event.key === 'Enter') {
+			addNewTask()
+			renderHTML();
+		}
 	}
 
 	function deleteTask(index) {
