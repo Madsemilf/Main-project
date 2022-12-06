@@ -10,9 +10,6 @@ export default function Slideshow() {
 		nextSlideButton.addEventListener('click', handleNextSlideButton);
 		previousSlideButton.addEventListener('click', handlePreviousSlideButton);
 	}
-	
-
-	transformSlides();
 
 	function handleNextSlideButton() {
 		increaseCurrentSlideIndex();
@@ -56,4 +53,7 @@ export default function Slideshow() {
   	 	slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
   		});
 	};
+
+	transformSlides();
+	
 }
