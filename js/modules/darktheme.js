@@ -1,6 +1,7 @@
 export default function DarkTheme() {
 	// data aka. "model"
 	let isDarkTheme = false;
+	// let darkTheme = storeDarkThemeLocally()
 	
 
 	const darkThemeButton = document.querySelector('.header__darktheme-button');
@@ -32,6 +33,30 @@ export default function DarkTheme() {
 		} else {
 			darkThemeButton.innerText = 'Dark theme';
 			document.body.classList.remove('dark-theme');
+		}
+
+		storeDarkThemeLocally();
+	}
+
+	function storeDarkThemeLocally() {
+		const key = 'todo-list';
+		const value = JSON.stringify(tasks);
+		 
+		window.localStorage.setItem(key, value);
+	}
+
+	/**
+	 * 	Returns the parsed array stored locally, otherwise an empty array
+	 * 	If nothing has been stored
+	 */
+	function getTasksLocally() {
+		const key = 'todo-list';
+		const tasksAsString = window.localStorage.getItem(key);
+
+		if (tasksAsString) {
+			return JSON.parse(tasksAsString);
+		} else {
+			return [];
 		}
 	}
 }
