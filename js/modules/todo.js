@@ -89,11 +89,10 @@ export default function Todo() {
 	function addTodoElementsToDOM(task, index) {
 		const taskElement = document.createElement('tr');
 		const taskElementText = document.createElement('td');
-		const taskElementStatus = document.createElement('td');
 		const taskElementDeleteButtonRow = document.createElement('td');
-		const taskElementEditButtonRow = document.createElement('td');
+		const taskElementStatusButtonRow = document.createElement('td');
 		const taskElementDeleteButton = document.createElement('button');
-		const taskElementDoneButton = document.createElement('button');
+		const taskElementStatusButton = document.createElement('button');
 		
 
 		taskElement.className = 'todo__task';
@@ -107,20 +106,19 @@ export default function Todo() {
 		}
 
 		taskElementDeleteButton.innerText = 'Delete';
-		taskElementDoneButton.innerText = task.done === true ? 'Undo!' : 'Done';
+		taskElementStatusButton.innerText = task.done === true ? 'Undo!' : 'Done';
 
-		taskElementEditButtonRow.className = 'table__edit-button'
+		taskElementStatusButtonRow.className = 'table__edit-button'
 		taskElementDeleteButtonRow.className = 'table__delete-button'
 
 		taskElementDeleteButton.addEventListener('click', handleTaskDeleteButtonClick);
-		taskElementDoneButton.addEventListener('click', handleTaskDoneButtonClick);
+		taskElementStatusButton.addEventListener('click', handleTaskDoneButtonClick);
 		
-		taskElementEditButtonRow.appendChild(taskElementDoneButton);
+		taskElementStatusButtonRow.appendChild(taskElementStatusButton);
 		taskElementDeleteButtonRow.appendChild(taskElementDeleteButton);
 		
 
 		taskElement.appendChild(taskElementText);
-		taskElement.appendChild(taskElementButtons);
 
 		return taskElement;
 	}
