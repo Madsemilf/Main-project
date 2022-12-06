@@ -116,9 +116,13 @@ export default function Todo() {
 		
 		taskElementStatusButtonRow.appendChild(taskElementStatusButton);
 		taskElementDeleteButtonRow.appendChild(taskElementDeleteButton);
+
+
 		
 
 		taskElement.appendChild(taskElementText);
+		taskElement.appendChild(taskElementStatusButtonRow);
+		taskElement.appendChild(taskElementDeleteButtonRow);
 
 		return taskElement;
 	}
