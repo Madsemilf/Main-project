@@ -6,6 +6,6 @@ import Todo from "./modules/todo.js";
 
 Header();
 DarkTheme();
-// Quizdos();
+Quiz();
 Slideshow();
 Todo();
