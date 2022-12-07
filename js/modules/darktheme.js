@@ -3,12 +3,11 @@ export default function DarkTheme() {
 	// let isDarkTheme = false;
 	let isDarkTheme = getDarkThemeLocally()
 	
-
 	const darkThemeButton = document.querySelector('.header__darktheme-button');
 
 	if (darkThemeButton !== null) {
 		darkThemeButton.addEventListener('click', handleDarkThemeClick);
-	}
+	} 
 
 	renderHTML();
 
