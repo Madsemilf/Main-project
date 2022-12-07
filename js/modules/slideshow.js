@@ -9,6 +9,7 @@ export default function Slideshow() {
 	if (nextSlideButton !== null) {
 		nextSlideButton.addEventListener('click', handleNextSlideButton);
 		previousSlideButton.addEventListener('click', handlePreviousSlideButton);
+		window.addEventListener('keyup', handleWindowKeyArrows);
 	}
 
 	function handleNextSlideButton() {
@@ -25,6 +26,8 @@ export default function Slideshow() {
 			slide.style.transform = `translateX(${index * 100}%)`;
 		});
 	}
+
+	function handleWindowKeyArrows(event)
 
 	let maxNumberOfSlides = slides.length - 1; // maximum number of slides
 
