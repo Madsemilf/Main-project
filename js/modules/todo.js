@@ -4,9 +4,9 @@ export default function Todo() {
 
 	const todoAddInput = document.querySelector('.todo__input');
 	const todoAddButton = document.querySelector('.todo__input-button');
-	const todoTasksContainer = document.querySelector('.todo__tasks');
+	const todoTasksTable = document.querySelector('.todo__tasks');
 
-	if (todoTasksContainer) {
+	if (todoTasksTable) {
 		todoAddButton.addEventListener('click', handleTodoAddButtonClick);
 		window.addEventListener('keydown', handleWindowKeyEnter);
 	}
@@ -144,11 +144,11 @@ export default function Todo() {
 	}
 	
 	function renderHTML() {
-		todoTasksContainer.innerHTML = '';
+		todoTasksTable.innerHTML = '';
 		
 		tasks.forEach((task, index) => {
 			const taskElement = addTodoElementsToDOM(task, index);
-			todoTasksContainer.appendChild(taskElement);
+			todoTasksTable.appendChild(taskElement);
 		});
 	}
 
