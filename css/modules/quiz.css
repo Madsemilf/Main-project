@@ -46,11 +46,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
+	margin-top: 5px;
 }
 
 .quiz__next-button {
 	width: 100%;
-	height: 20%;
+	height: 15%;
 	color: var(--secondary-text-color);
 	background: green;
 	position: absolute;
