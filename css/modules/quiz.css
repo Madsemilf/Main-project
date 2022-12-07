@@ -76,3 +76,7 @@
   	border-width: 0;
 	color: var(--secondary-text-color);
 }
+
+.quiz__start-button--visible {
+	display: none;
+}
