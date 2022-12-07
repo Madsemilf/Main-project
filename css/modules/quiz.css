@@ -26,6 +26,10 @@
 	color: var(--secondary-text-color);
 }
 
+.quiz__container--visible {
+	display: none;
+}
+
 .quiz__answer-buttons {
 	height: 55%;
 	display: grid;
@@ -64,4 +68,11 @@
 	background: green;
 	position: absolute;
 	bottom: 0%;
+}
+
+.quiz__start-button {
+	background-color: var(--primary-color);
+	border-radius: 8px;
+  	border-width: 0;
+	color: var(--secondary-text-color);
 }
