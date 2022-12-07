@@ -5,10 +5,16 @@ main {
 	background-color: var(--primary-color);
 }
 
-h1 {
-	text-align: center;
+.slideshow__title {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+
+.slideshow__title h1 {
 	color: var(--secondary-text-color);
-	margin-top: 7%;
+	font-size: 3rem;
 }
 .slideshow__container {
 	width: 90vw;
