@@ -27,8 +27,14 @@ export default function Slideshow() {
 		});
 	}
 
-	function handleWindowKeyArrows(event)
-
+	function handleWindowKeyArrows(event) {
+		if (event.key === "ArrowRight") {
+			increaseCurrentSlideIndex();
+		}	else if (event.key === "ArrowLeft") {
+			decreaseCurrentSlideIndex();
+		}
+	}
+	
 	let maxNumberOfSlides = slides.length - 1; // maximum number of slides
 
 	// checks if the current slide is the last. Resets current slide
