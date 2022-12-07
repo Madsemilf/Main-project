@@ -29,7 +29,7 @@ export default function Quiz() {
 	
 	const questions = [
 		{ 
-			question: "What is 4 * 4",
+			question: "What is 4 * 4?",
 			answers: [
 				{ 
 					text: "10",
