@@ -5,7 +5,7 @@ export default function Quiz() {
 	const startButton = document.querySelector('.quiz__start-button');
 	const questionContainerElement = document.querySelector('.quiz__container');
 	const questionElement = document.querySelector('.quiz__question');
-	// const answerButtons = document.querySelector('.quiz__answer-button');
+	const answerButtonsElement = document.querySelector('.quiz__answer-buttons');
 
 	if (startButton) {
 		startButton.addEventListener('click', handleStartButtonClick);
@@ -19,13 +19,29 @@ export default function Quiz() {
 		setNextQuestion()
 	}
 
-	function showQuestion(question) {
-		questionElement.innerText = question.question;
-	}
-
 	function setNextQuestion() {
 		showQuestion(shuffledQuestions[currentQuestionIndex])
 	}
+
+	function showQuestion(question) {
+		questionElement.innerText = question.question;
+		question.answers.forEach(answer => {
+			const answerButton = document.createElement('button')
+			answerButton.innerText = answer.text
+			answerButton.classList.add('quiz__answer-button')
+			if (answer.correct) {
+				answerButton.dataset.correct = answer.correct
+			}
+			answerButton.addEventListener('click', selectAnswer)
+			answerButtonsElement.appendChild(answerButton)
+		})
+	}
+
+	function selectAnswer(event) {
+
+	}
+
+
 	
 	const questions = [
 		{ 
