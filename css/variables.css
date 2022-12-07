@@ -1,8 +1,8 @@
 :root {
 	--primary-text-color: white;
 	--secondary-text-color: black;
-	--primary-color: rgb(204, 150, 150);
-	--secondary-color: rgb(255, 210, 217);
+	--primary-color: #F4EAD5;
+	--secondary-color: #FFFBE9;
 
 	--font-size-large: 1.5rem;
 	--font-size-small: 0.5rem;
@@ -13,7 +13,7 @@
 .dark-theme {
 	--primary-text-color: rgb(37, 37, 37);
 	--secondary-text-color: rgb(202, 202, 202);
-	--primary-color: rgb(38, 38, 38);
-	--secondary-color: rgb(61, 61, 61);
+	--primary-color: #121212;
+	--secondary-color: #2c2c2c;
 
 }
