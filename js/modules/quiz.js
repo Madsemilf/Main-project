@@ -11,6 +11,12 @@ export default function Quiz() {
 		startButton.addEventListener('click', handleStartButtonClick);
 	}
 
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+
 	function handleStartButtonClick() {
 		startButton.classList.add('quiz__start-button--visible');
 		shuffledQuestions = questions.sort(() => Math.random() - .5);
@@ -46,8 +52,6 @@ export default function Quiz() {
 	function selectAnswer(event) {
 
 	}
-
-
 	
 	const questions = [
 		{ 
