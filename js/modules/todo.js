@@ -144,7 +144,7 @@ export default function Todo() {
 	}
 	
 	function renderHTML() {
-		todoTasksTable.innerHTML = '';
+		todoTasksTable.innerText = '';
 		
 		tasks.forEach((task, index) => {
 			const taskElement = addTodoElementsToDOM(task, index);
