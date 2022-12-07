@@ -42,6 +42,14 @@
 	color: var(--secondary-text-color);
 }
 
+.quiz__answer-button.correct {
+	background-color: green;
+}
+
+.quiz__answer-button.wrong {
+	background-color: red;
+}
+
 .quiz__button {
 	display: flex;
 	justify-content: center;
@@ -56,6 +64,4 @@
 	background: green;
 	position: absolute;
 	bottom: 0%;
-	
-	
 }
