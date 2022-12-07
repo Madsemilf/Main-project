@@ -6,7 +6,6 @@ export default function Todo() {
 	const todoAddButton = document.querySelector('.todo__input-button');
 	const todoTasksContainer = document.querySelector('.todo__tasks');
 
-
 	if (todoTasksContainer) {
 		todoAddButton.addEventListener('click', handleTodoAddButtonClick);
 		window.addEventListener('keydown', handleWindowKeyEnter);
@@ -158,10 +157,3 @@ export default function Todo() {
 	 */
 	renderHTML();
 }
-
-// function addTodoElementsToDOM(task, index) {
-// 	const taskElement = document.createElement('tr');
-// 	const taskElementText = document.createElement('td');
-// 	const taskElementButtons = document.createElement('td');
-// 	const taskElementDeleteButton = document.createElement('td');
-// 	const taskElementDoneButton = document.createElement('td');
