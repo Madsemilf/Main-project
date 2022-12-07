@@ -22,8 +22,8 @@ export default function Slideshow() {
 
 	/**
 	 * 
-	 * I know that you have a better way of increasing and decreasing slides.
-	 * I wanted to try out a different method using transform insted of indexNumbers.
+	 * I know that you have a "better" way of increasing and decreasing slides.
+	 * I wanted to try out a different method using transform insted of slideshow--active.
 	 * This is what I came up with.
 	 * 
 	 */
