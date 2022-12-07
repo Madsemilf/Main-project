@@ -13,28 +13,34 @@ export default function Quiz() {
 
 	function handleStartButtonClick() {
 		startButton.classList.add('quiz__start-button--visible');
-		shuffledQuestions = questions.sort(() => Math.random() - .5 )
+		shuffledQuestions = questions.sort(() => Math.random() - .5);
 		currentQuestionIndex = 0;
 		questionContainerElement.classList.remove('quiz__container--visible');
 		setNextQuestion()
 	}
 
 	function setNextQuestion() {
-		showQuestion(shuffledQuestions[currentQuestionIndex])
+		showQuestion(shuffledQuestions[currentQuestionIndex]);
 	}
+
+	/**
+	 * 
+	 * @param {string} question The question from question array
+	 * 
+	 */
 
 	function showQuestion(question) {
 		questionElement.innerText = question.question;
 		question.answers.forEach(answer => {
-			const answerButton = document.createElement('button')
-			answerButton.innerText = answer.text
-			answerButton.classList.add('quiz__answer-button')
+			const answerButton = document.createElement('button');
+			answerButton.innerText = answer.text;
+			answerButton.classList.add('quiz__answer-button');
 			if (answer.correct) {
-				answerButton.dataset.correct = answer.correct
+				answerButton.dataset.correct = answer.correct;
 			}
-			answerButton.addEventListener('click', selectAnswer)
-			answerButtonsElement.appendChild(answerButton)
-		})
+			answerButton.addEventListener('click', selectAnswer);
+			answerButtonsElement.appendChild(answerButton);
+		});
 	}
 
 	function selectAnswer(event) {
