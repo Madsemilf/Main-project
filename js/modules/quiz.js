@@ -52,7 +52,7 @@ export default function Quiz() {
 	 * 
 	 */
 	function resetState() {
-		nextButton.classList.remove('quiz__next-button--visible');
+		nextButton.classList.add('quiz__next-button--visible');
 		while (answerButtonsElement.firstChild) {
 			answerButtonsElement.removeChild(answerButtonsElement.firstChild);
 		}
@@ -62,8 +62,8 @@ export default function Quiz() {
 	 * 
 	 * Checks if answer chosen is correct.
 	 * Converts answer buttons to an array so we can loop through.
-	 * 
-	 * @param {*} event Selected answer in quiz
+	 * Allows user to restart game when there is no more questions in the shuffled questions array.
+	 * Adds next button after an answer is clicked.
 	 */
 	function selectAnswer(event) {
 		const selectedAnswerButton = event.target;
@@ -79,6 +79,8 @@ export default function Quiz() {
 			startButton.classList.remove('quiz__start-button--visible');
 			questionContainerElement.classList.add('quiz__container--visible');
 		}
+
+		nextButton.classList.remove('quiz__next-button--visible')
 	}
 
 	function setStatusClass(element, correct) {
@@ -96,10 +98,11 @@ export default function Quiz() {
 	}
 
 	/**
-	 * Creates 
-	 * 
+	 * Populates the answers by looping through question answers. 
+	 * Create buttons per answer within that question and adds class to it.
+	 * Checks if answer is correct. If it is correct set data attribute to correct.
+	 * Appends answer buttons to the parent element.
 	 * @param {string} question The question from question array
-	 * 
 	 */
 	function showQuestion(question) {
 		questionElement.innerText = question.question;
@@ -198,7 +201,7 @@ export default function Quiz() {
 			]
 		},
 		{ 
-			question: "What is the optimal Tab Size?",
+			question: "What is the optimal Tab Size for writing JS?",
 			answers: [
 				{ 
 					text: "2",
@@ -207,6 +210,19 @@ export default function Quiz() {
 				{ 
 					text: "3",
 					correct: true
+				},
+			]
+		},
+		{ 
+			question: "Light mode or dark mode?",
+			answers: [
+				{ 
+					text: "The Dark Side",
+					correct: true
+				},
+				{ 
+					text: "Show me the light",
+					correct: false
 				},
 			]
 		},
