@@ -11,7 +11,13 @@ export default function Todo() {
 		window.addEventListener('keydown', handleWindowKeyEnter);
 	}
 
-	// Inputs new task with the "enter" key.
+	/**
+	 * 
+	 * TODO: Change event.keyCode to event.key and get it to work for "Enter".
+	 * Inputs new task with the "enter" key.
+	 * 
+	 */
+
 	function handleWindowKeyEnter(event) {
 		if (event.keyCode === 13) {
 			addNewTask();
@@ -31,6 +37,7 @@ export default function Todo() {
 		renderHTML();
 	}
 
+	
 	function handleTaskDoneButtonClick(event) {
 		/**
 		 * flaky way of getting the task DOM element, given the current structure:
@@ -47,8 +54,13 @@ export default function Todo() {
 		renderHTML();
 	}
 	
-	// Pushes the value in input field to the todo table.
-	// If enter value = '' it alerts the person concerned.
+	/**
+	 * 
+	 * Pushes the value in input field to the todo table.
+	 * If enter value = '' it alerts the person concerned.
+	 * 
+	 */
+
 	function addNewTask() {
 		const currentInput = todoAddInput.value;
 		
@@ -64,7 +76,13 @@ export default function Todo() {
 		storeTasksLocally();
 	}
 
-	// removes or "splices" task from table and stores changes in local storage.
+	/**
+	 * 
+	 * Converts values (tasks) to string.
+	 * Removes or "splices" task from table and stores changes in local storage.
+	 * 
+	 */
+
 	function deleteTask(index) {
 		tasks.splice(index, 1);
 
@@ -77,8 +95,13 @@ export default function Todo() {
 		storeTasksLocally();
 	}
 
-	// Converts values (tasks) to string.
-	// Puts them in key value pairs in local storage.
+	/**
+	 * 
+	 * Converts values (tasks) to string.
+	 * Puts them in key value pairs in local storage.
+	 * 
+	 */
+
 	function storeTasksLocally() {
 		const key = 'todo-list';
 		const value = JSON.stringify(tasks);

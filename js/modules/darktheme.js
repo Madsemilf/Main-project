@@ -32,6 +32,11 @@ export default function DarkTheme() {
 		window.localStorage.setItem(key, value);
 	}
 
+	/**
+	 * 
+	 * 
+	 * 
+	 */
 	function getDarkThemeLocally() {
 		const key = 'dark-theme';
 		const darkThemeAsString = window.localStorage.getItem(key);
