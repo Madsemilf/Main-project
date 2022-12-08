@@ -87,6 +87,7 @@ main {
 	display: inline-block;
 	padding: 6px;
 	transform: translateY(100%);
+	margin-bottom: 1px;
 }
 
 .slideshow__button-arrowleft {
