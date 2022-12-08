@@ -9,6 +9,7 @@
 	--font-size-small: 0.5rem;
 
 	--wrong-answer: red;
+	--correct-answer: green;
 }
 
 .dark-theme {
