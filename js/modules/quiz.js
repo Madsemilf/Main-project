@@ -3,12 +3,14 @@ export default function Quiz() {
 	let shuffledQuestions, currentQuestionIndex;
 	
 	const startButton = document.querySelector('.quiz__start-button');
+	const nextButton = document.querySelector('.quiz__next-button')
 	const questionContainerElement = document.querySelector('.quiz__container');
 	const questionElement = document.querySelector('.quiz__question');
 	const answerButtonsElement = document.querySelector('.quiz__answer-buttons');
 
 	if (startButton) {
 		startButton.addEventListener('click', handleStartButtonClick);
+		nextButton.addEventListener('click', handleNextButtonClick);
 	}
 
 	/**
@@ -23,6 +25,11 @@ export default function Quiz() {
 		currentQuestionIndex = 0;
 		questionContainerElement.classList.remove('quiz__container--visible');
 		setNextQuestion()
+	}
+
+	function handleNextButtonClick() {
+		currentQuestionIndex++
+		setNextQuestion();
 	}
 
 	function setNextQuestion() {
