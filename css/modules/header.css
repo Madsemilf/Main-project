@@ -22,7 +22,7 @@
 
 .header__darktheme-button {
 	height: 3rem;
-	width: 10rem;
+	width: 15rem;
 	position: absolute;
 	right: 20%;
 	top: 50%;
@@ -36,6 +36,10 @@
 @media screen and (max-width: 600px) {
 	.header__darktheme-button {
 		right: 25%;
+		font-size: 1rem;
+	}
+	.header__menu-button {
+		font-size: 1rem;
 	}
 }
 
@@ -75,10 +79,8 @@
 	}
 }
 
-
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.header__navigation-menu {
-		background: blue;
-		font-size: 20px;
+		font-size: 1rem;
 	}
-} */
+}
