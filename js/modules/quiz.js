@@ -108,6 +108,27 @@ export default function Quiz() {
 					correct: true
 				}
 			]
+		},
+		{ 
+			question: "What does CSS stand for?",
+			answers: [
+				{ 
+					text: "Cass Sass Sass",
+					correct: false
+				},
+				{ 
+					text: "Cascading Style Sheets ",
+					correct: true
+				},
+				{ 
+					text: "It does not stand for anything",
+					correct: false
+				},
+				{ 
+					text: "Cascading Styling sheet",
+					correct: false
+				}
+			]
 		}
 	];	
 }
