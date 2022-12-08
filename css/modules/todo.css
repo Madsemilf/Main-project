@@ -30,6 +30,7 @@
 	background: var(--primary-text-color);
 	color: var(--secondary-text-color);
 	border-radius: 10px;
+	background-color: var(--secondary-color);
 }
 
 .todo__input-button {
