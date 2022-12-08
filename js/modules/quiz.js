@@ -55,7 +55,10 @@ export default function Quiz() {
 		}
 	}
 
-	
+	function clearStatusClass(element) {
+		element.classList.remove('correct');
+		element.classList.remove('wrong');
+	}
 
 	/**
 	 * 
