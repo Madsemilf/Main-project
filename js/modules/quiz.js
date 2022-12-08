@@ -47,7 +47,7 @@ export default function Quiz() {
 	 * TODO: Write this code using for loop instead of while loop!
 	 * 
 	 * Wants to reset state after next button is clicked.
-	 * Needs to loop through all b
+	 * Needs to loop through answer buttons.
 	 * if there is a child inside the answer-button element, we want to remove it.
 	 * 
 	 */
