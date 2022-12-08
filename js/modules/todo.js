@@ -12,12 +12,9 @@ export default function Todo() {
 	}
 
 	/**
-	 * 
-	 * TODO: Change event.keyCode to event.key and get it to work for "Enter".
 	 * Inputs new task with the "enter" key.
-	 * 
+	 * TODO: Change event.keyCode to event.key and get it to work for "Enter".
 	 */
-
 	function handleWindowKeyEnter(event) {
 		if (event.keyCode === 13) {
 			addNewTask();
@@ -39,15 +36,6 @@ export default function Todo() {
 
 	
 	function handleTaskDoneButtonClick(event) {
-		/**
-		 * flaky way of getting the task DOM element, given the current structure:
-		 * 
-		 * 		.parentElement						<div class="todo__task">
-		 * 												task text
-		 * 		.parentElement							<div class="todo__buttons">
-		 * 		event.currentTarget ->				<button>Delete</button>
-		 * 			
-		 */
 		const task = event.currentTarget.parentElement.parentElement;
 		
 		markTaskDone(task.dataset.index);
@@ -60,7 +48,6 @@ export default function Todo() {
 	 * If enter value = '' it alerts the person concerned.
 	 * 
 	 */
-
 	function addNewTask() {
 		const currentInput = todoAddInput.value;
 		
@@ -82,7 +69,6 @@ export default function Todo() {
 	 * Removes or "splices" task from table and stores changes in local storage.
 	 * 
 	 */
-
 	function deleteTask(index) {
 		tasks.splice(index, 1);
 
@@ -101,7 +87,6 @@ export default function Todo() {
 	 * Puts them in key value pairs in local storage.
 	 * 
 	 */
-
 	function storeTasksLocally() {
 		const key = 'todo-list';
 		const value = JSON.stringify(tasks);
@@ -176,7 +161,8 @@ export default function Todo() {
 	}
 
 	/**
-	 * 	render at least once after loading the module for the first time
+	 * 
+	 * Render at least once after loading the module for the first time
 	 */
 	renderHTML();
 }
