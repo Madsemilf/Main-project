@@ -11,21 +11,20 @@ export default function Quiz() {
 	if (startButton) {
 		startButton.addEventListener('click', handleStartButtonClick);
 		nextButton.addEventListener('click', handleNextButtonClick);
-		nextButton.addEventListener('click', removeAnswerButtonsFromDOM);
 	}
 
 	/**
 	 * 
-	 * 
+	 * Adds display: none to start butten after it is clicked.
+	 * Creates shuffled questions which are grabbed random from questions array.
+	 * Removes display: none from question container and shows it in DOM.
 	 * 
 	 */
-
 	function handleStartButtonClick() {
 		startButton.classList.add('quiz__start-button--visible');
 		shuffledQuestions = questions.sort(() => Math.random() - .5);
 		currentQuestionIndex = 0;
 		questionContainerElement.classList.remove('quiz__container--visible');
-		// answerButtonsElement.classList.remove('quiz__answer-buttons--visible');
 		setNextQuestion()
 	}
 
@@ -38,16 +37,25 @@ export default function Quiz() {
 	 * Converts answer buttons to an array.
 	 * Loops through answer buttons and removes them from the DOM.
 	 */
-
 	function setNextQuestion() {
-		removeAnswerButtonsFromDOM()
-		showQuestion(shuffledQuestions[currentQuestionIndex])
+		resetState();
+		showQuestion(shuffledQuestions[currentQuestionIndex]);
 	}
 
-	function removeAnswerButtonsFromDOM() {
-		// Array.from(answerButtonsElement.children).forEach(button => {
-		// answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-		// })
+	/**
+	 * 
+	 * TODO: Write this code using for loop instead of while loop!
+	 * 
+	 * Wants to reset state after next button is clicked.
+	 * Needs to loop through all b
+	 * if there is a child inside the answer-button element, we want to remove it.
+	 * 
+	 */
+	function resetState() {
+		nextButton.classList.remove('quiz__next-button--visible');
+		while (answerButtonsElement.firstChild) {
+			answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+		}
 	}
 
 	/**
@@ -81,11 +89,11 @@ export default function Quiz() {
 	}
 
 	/**
+	 * Creates 
 	 * 
 	 * @param {string} question The question from question array
 	 * 
 	 */
-
 	function showQuestion(question) {
 		questionElement.innerText = question.question;
 		question.answers.forEach(answer => {
@@ -99,6 +107,24 @@ export default function Quiz() {
 			answerButtonsElement.appendChild(answerButton);
 		});
 	}
+
+	// function showQuestion(answer) {
+	// 	const answerButton = document.createElement('button');
+
+	// 	answerButton.className = 'quiz__answer-button';
+	// 	answerButton.innerText = answer.text;
+
+	// 	if (answer.correct) {
+	// 		answerButton.dataset.correct = answer.correct;
+	// 	}
+
+	// 	answerButton.addEventListener('click', selectAnswer);
+	// 	answerButtonsElement.appendChild(answerButton);
+	// }
+
+	// function renderHTML() {
+
+	// } 
 	
 	const questions = [
 		{ 
