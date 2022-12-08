@@ -26,8 +26,10 @@ main {
 }
 
 @media screen and (max-width: 675px) {
-	h1 {
+	.slideshow__title h1 {
 		margin-top: 20%;
+		text-align: center;
+		font-size: var(--font-size-normal);
 	}
 }
 
@@ -57,7 +59,7 @@ main {
 	width: 40px;
 	height: 40px;
 	padding: 10px;
-	border: none;
+	border: solid 1px var(--primary-color);
 	border-radius: 50%;
 	z-index: 10px;
 	cursor: pointer;
@@ -67,7 +69,7 @@ main {
 
 .slideshow__button-next:active, .slideshow__button-previous:active {
 	transform: scale(1.2);
- }
+}
 
 .slideshow__button-next {
 	top: 45%;
@@ -77,4 +79,22 @@ main {
 .slideshow__button-previous {
 	top: 45%;
 	left: 2%;
+}
+
+.slideshow__button-arrowleft, .slideshow__button-arrowright {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 6px;
+	transform: translateY(100%);
+}
+
+.slideshow__button-arrowleft {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.slideshow__button-arrowright {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
 }
