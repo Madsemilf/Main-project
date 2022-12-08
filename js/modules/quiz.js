@@ -11,6 +11,7 @@ export default function Quiz() {
 	if (startButton) {
 		startButton.addEventListener('click', handleStartButtonClick);
 		nextButton.addEventListener('click', handleNextButtonClick);
+		nextButton.addEventListener('click', handleNextButtonEvent);
 	}
 
 	/**
@@ -32,10 +33,19 @@ export default function Quiz() {
 		setNextQuestion();
 	}
 
+	/**
+	 * Loops through answer buttons and removes them from the DOM.
+	 */
+
+	function handleNextButtonEvent() {
+		Array.from(answerButtonsElement.firstChild).forEach(button => {
+			answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+		})
+	}
+
 	function setNextQuestion() {
 		showQuestion(shuffledQuestions[currentQuestionIndex]);
 	}
-
 
 	/**
 	 * 
@@ -51,6 +61,8 @@ export default function Quiz() {
 		Array.from(answerButtonsElement.children).forEach(button => {
 			setStatusClass(button, button.dataset.correct);
 		});
+		if (shuffledQuestions.length > currentQuestionIndex +1) {
+		}
 	}
 
 	function setStatusClass(element, correct) {
@@ -129,6 +141,6 @@ export default function Quiz() {
 					correct: false
 				}
 			]
-		}
+		},
 	];	
 }
