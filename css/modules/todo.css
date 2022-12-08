@@ -35,20 +35,27 @@
 
 .todo__input-button {
 	position: absolute;
-	right: 23%;
+	right: 25%;
 	top: 30%;
 	height: 5%;
 	width: 80px;
 	background-color: black;
 	color: var(--secondary-text-color);
 	fill: var(--primary-text-color);
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	background-color: var(--primary-text-color);
 	text-decoration: none;
 	transition: all .3s;
 	touch-action: manipulation;
 	background: none;
+}
+
+@media screen and (max-width: 675px) {
+	.todo__input-button {
+		font-size: 1rem;
+		right: 21%;
+	}
 }
 
 .todo__input-button:focus {
