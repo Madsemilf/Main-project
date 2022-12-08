@@ -70,6 +70,7 @@
 
 }
 
+/* slowly transform the header from 0% to 100%, insted of it being instant */
 @keyframes growDown {
 	0% {
 		 transform: scaleY(0)

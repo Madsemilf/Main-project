@@ -67,10 +67,12 @@
 	}
 }
 
+/* applies color to the correct answer in the DOM */
 .quiz__answer-button.correct {
 	background-color: green;
 }
 
+/* applies color to the wrong answer in the DOM */
 .quiz__answer-button.wrong {
 	background-color: red;
 }
