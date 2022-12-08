@@ -138,23 +138,23 @@ export default function Quiz() {
 	
 	const questions = [
 		{ 
-			question: "What is 4 * 4?",
+			question: "What is 2 + 4 * 4?",
 			answers: [
 				{ 
-					text: "10",
+					text: "18",
+					correct: true
+				},
+				{ 
+					text: "22",
 					correct: false
 				},
 				{ 
-					text: "12",
-					correct: false
-				},
-				{ 
-					text: "14",
+					text: "24",
 					correct: false
 				},
 				{ 
 					text: "16",
-					correct: true
+					correct: false
 				}
 			]
 		},
@@ -222,6 +222,27 @@ export default function Quiz() {
 				},
 				{ 
 					text: "Show me the light",
+					correct: false
+				},
+			]
+		},
+		{ 
+			question: "When was the first email sent?",
+			answers: [
+				{ 
+					text: "1971",
+					correct: true
+				},
+				{ 
+					text: "1981",
+					correct: false
+				},
+				{ 
+					text: "1991",
+					correct: false
+				},
+				{ 
+					text: "2001",
 					correct: false
 				},
 			]
