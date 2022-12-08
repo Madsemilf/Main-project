@@ -46,13 +46,9 @@
 	margin: 20px 0;
 }
 
-/* .quiz__answer-buttons--visible {
+.quiz__next-button--visible {
 	display: none;
-} */
-
-/* .quiz__next-button--visible {
-	display: none;
-} */
+}
 
 .quiz__answer-button {
 	background-color: var(--primary-color);
