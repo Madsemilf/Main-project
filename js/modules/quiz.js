@@ -29,6 +29,25 @@ export default function Quiz() {
 		showQuestion(shuffledQuestions[currentQuestionIndex]);
 	}
 
+
+	/**
+	 * 
+	 * Checks if answer chosen is correct.
+	 * Converts answer buttons to an array so we can loop through.
+	 * 
+	 * @param {*} event Selected answer in quiz
+	 */
+	function selectAnswer(event) {
+		const selectedAnswerButton = event.target;
+		const correctAnswer = selectedAnswerButton.dataset.correct;
+		setStatusClass(document.body, correctAnswer);
+		Array.from(answerButtonsElement.children).forEach(button => {
+			setStatusClass(button, button.dataset.correct);
+		});
+	}
+
+	
+
 	/**
 	 * 
 	 * @param {string} question The question from question array
@@ -47,10 +66,6 @@ export default function Quiz() {
 			answerButton.addEventListener('click', selectAnswer);
 			answerButtonsElement.appendChild(answerButton);
 		});
-	}
-
-	function selectAnswer(event) {
-
 	}
 	
 	const questions = [
