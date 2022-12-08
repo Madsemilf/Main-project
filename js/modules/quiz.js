@@ -72,6 +72,13 @@ export default function Quiz() {
 		Array.from(answerButtonsElement.children).forEach(button => {
 			setStatusClass(button, button.dataset.correct);
 		});
+		if (shuffledQuestions.length > currentQuestionIndex + 1) {
+			nextButton.classList.remove('quiz__next-button--visible')
+		} else {
+			startButton.innerText = 'Restart';
+			startButton.classList.remove('quiz__start-button--visible');
+			questionContainerElement.classList.add('quiz__container--visible');
+		}
 	}
 
 	function setStatusClass(element, correct) {
