@@ -127,8 +127,8 @@ export default function Todo() {
 		taskElementDeleteButton.innerText = 'Delete';
 		taskElementStatusButton.innerText = task.done === true ? 'Undo!' : 'Done';
 
-		taskElementStatusButtonRow.className = 'table__status-button'
-		taskElementDeleteButtonRow.className = 'table__delete-button'
+		taskElementStatusButtonRow.className = 'tablerow__status-button'
+		taskElementDeleteButtonRow.className = 'tablerow__delete-button'
 
 		taskElementDeleteButton.addEventListener('click', handleTaskDeleteButtonClick);
 		taskElementStatusButton.addEventListener('click', handleTaskDoneButtonClick);
