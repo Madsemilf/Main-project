@@ -1,5 +1,5 @@
 export default function DarkTheme() {
-	// data aka. "model"
+	
 	// let isDarkTheme = false;
 	let isDarkTheme = getDarkThemeLocally()
 	
@@ -9,13 +9,6 @@ export default function DarkTheme() {
 		darkThemeButton.addEventListener('click', handleDarkThemeClick);
 	} 
 
-	renderHTML();
-
-	/**
-	 * TODO: 
-	 * 
-	 * 
-	 */
 	function handleDarkThemeClick() {
 		toggleDarkTheme();
 		renderHTML();
@@ -34,8 +27,7 @@ export default function DarkTheme() {
 
 	/**
 	 * 
-	 * 
-	 * 
+	 * @returns returns empty array if no value is stored in local storage.
 	 */
 	function getDarkThemeLocally() {
 		const key = 'dark-theme';
@@ -59,5 +51,12 @@ export default function DarkTheme() {
 
 		storeDarkThemeLocally();
 	}
+
+	/**
+	 * 
+	 * We must update the page once after loading the module to actually render/pupulate the light theme button.
+	 * Web page will be dark theme by default.
+	 */
+	renderHTML();
 }
 
