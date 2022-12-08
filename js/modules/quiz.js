@@ -11,7 +11,7 @@ export default function Quiz() {
 	if (startButton) {
 		startButton.addEventListener('click', handleStartButtonClick);
 		nextButton.addEventListener('click', handleNextButtonClick);
-		nextButton.addEventListener('click', handleNextButtonEvent);
+		nextButton.addEventListener('click', removeAnswerButtonsFromDOM);
 	}
 
 	/**
@@ -25,26 +25,29 @@ export default function Quiz() {
 		shuffledQuestions = questions.sort(() => Math.random() - .5);
 		currentQuestionIndex = 0;
 		questionContainerElement.classList.remove('quiz__container--visible');
+		// answerButtonsElement.classList.remove('quiz__answer-buttons--visible');
 		setNextQuestion()
 	}
 
 	function handleNextButtonClick() {
 		currentQuestionIndex++
-		setNextQuestion();
+		setNextQuestion(currentQuestionIndex);
 	}
 
 	/**
+	 * Converts answer buttons to an array.
 	 * Loops through answer buttons and removes them from the DOM.
 	 */
 
-	function handleNextButtonEvent() {
-		Array.from(answerButtonsElement.firstChild).forEach(button => {
-			answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-		})
+	function setNextQuestion() {
+		removeAnswerButtonsFromDOM()
+		showQuestion(shuffledQuestions[currentQuestionIndex])
 	}
 
-	function setNextQuestion() {
-		showQuestion(shuffledQuestions[currentQuestionIndex]);
+	function removeAnswerButtonsFromDOM() {
+		// Array.from(answerButtonsElement.children).forEach(button => {
+		// answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+		// })
 	}
 
 	/**
@@ -61,8 +64,6 @@ export default function Quiz() {
 		Array.from(answerButtonsElement.children).forEach(button => {
 			setStatusClass(button, button.dataset.correct);
 		});
-		if (shuffledQuestions.length > currentQuestionIndex +1) {
-		}
 	}
 
 	function setStatusClass(element, correct) {
@@ -140,6 +141,40 @@ export default function Quiz() {
 					text: "Cascading Styling sheet",
 					correct: false
 				}
+			]
+		},
+		{ 
+			question: "Inside which HTML element do we put the JavaScript?",
+			answers: [
+				{ 
+					text: "<scripting>",
+					correct: false
+				},
+				{ 
+					text: "<script>",
+					correct: true
+				},
+				{ 
+					text: "<javascript>",
+					correct: false
+				},
+				{ 
+					text: "<js>",
+					correct: false
+				}
+			]
+		},
+		{ 
+			question: "What is the optimal Tab Size?",
+			answers: [
+				{ 
+					text: "2",
+					correct: false
+				},
+				{ 
+					text: "3",
+					correct: true
+				},
 			]
 		},
 	];	
