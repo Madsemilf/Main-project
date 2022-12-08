@@ -42,7 +42,7 @@
 	background-color: black;
 	color: var(--secondary-text-color);
 	fill: var(--primary-text-color);
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: 600;
 	background-color: var(--primary-text-color);
 	text-decoration: none;
@@ -88,20 +88,34 @@ td, th {
 	text-align: left;
 	padding: 8px;
 	font-size: 1.5rem;
- }
+}
+
+td, th {
+	border: 1px solid var(--secondary-text-color);
+	text-align: left;
+	padding: 8px;
+	font-size: 1.5rem;
+}
 
 .todo__table-task {
 	width: 85%;
- }
+}
 
 .todo__table-status, .todo__table-delete {
 	text-align: center;
 }
 
-.table__delete-button, .table__status-button {
+.tablerow__delete-button, .tablerow__status-button {
 	text-align: center;
 	padding: 3px;
- }
+}
+
+@media screen and (max-width: 675px) {
+	.todo__task-text, .tablerow__delete-button, .tablerow__status-button {
+		font-size: 1rem;
+	}
+}
+
 
 .todo__task--done .todo__task-text {
 	color: red;
