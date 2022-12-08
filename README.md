@@ -6,4 +6,6 @@ The project reflects what we have learned through our first semester of front en
 Project includes a slideshow, a quiz and a to-do list, and is implemented using HTML, CSS and JavaScript.
 Figma prototype is also included.
 
+Repository link in github.txt.
+
 Quiz needs some patching..
