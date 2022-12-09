@@ -10,6 +10,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: end;
+	margin-top: 10px;
 }
 
 .slideshow__title h1 {
