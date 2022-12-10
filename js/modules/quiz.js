@@ -7,6 +7,7 @@ export default function Quiz() {
 	const questionContainerElement = document.querySelector('.quiz__container');
 	const questionElement = document.querySelector('.quiz__question');
 	const answerButtonsElement = document.querySelector('.quiz__answer-buttons');
+	const showScore = document.querySelector('.quiz__score');
 
 	if (startButton) {
 		startButton.addEventListener('click', handleStartButtonClick);
@@ -58,6 +59,7 @@ export default function Quiz() {
 		answerButtonsElement.innerHTML = '';
 	 }
 
+	 let score = 0;
 	/**
 	 * 
 	 * Checks if answer chosen is correct.
@@ -79,6 +81,15 @@ export default function Quiz() {
 			startButton.classList.remove('quiz__start-button--visible');
 			questionContainerElement.classList.add('quiz__container--visible');
 		}
+
+		// Update the score if the user selected the correct answer
+		if (correctAnswer) {
+			score++;
+		} else {
+			score--;
+		}
+		// Update the score element to show the current score
+		showScore.innerHTML = `Score: ${score}`;
 
 		nextButton.classList.remove('quiz__next-button--visible')
 	}
@@ -117,24 +128,6 @@ export default function Quiz() {
 			answerButtonsElement.appendChild(answerButton);
 		});
 	}
-
-	// function showQuestion(answer) {
-	// 	const answerButton = document.createElement('button');
-
-	// 	answerButton.className = 'quiz__answer-button';
-	// 	answerButton.innerText = answer.text;
-
-	// 	if (answer.correct) {
-	// 		answerButton.dataset.correct = answer.correct;
-	// 	}
-
-	// 	answerButton.addEventListener('click', selectAnswer);
-	// 	answerButtonsElement.appendChild(answerButton);
-	// }
-
-	// function renderHTML() {
-
-	// } 
 	
 	const questions = [
 		{ 
