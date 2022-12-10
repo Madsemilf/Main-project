@@ -51,12 +51,12 @@ export default function Quiz() {
 	 * if there is a child inside the answer-button element, we want to remove it.
 	 * 
 	 */
-	function resetState() {
+	 function resetState() {
 		nextButton.classList.add('quiz__next-button--visible');
-		while (answerButtonsElement.firstChild) {
-			answerButtonsElement.removeChild(answerButtonsElement.firstChild);
-		}
-	}
+	 
+		// Use the innerHTML property to remove all child elements from the answerButtonsElement element
+		answerButtonsElement.innerHTML = '';
+	 }
 
 	/**
 	 * 
