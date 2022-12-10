@@ -33,6 +33,12 @@
 	}
 }
 
+@media screen and (max-width: 1600px) {
+	.quiz__question, .quiz__answer-buttons {
+		font-size: 2rem;
+	}
+}
+
 .quiz__container--visible {
 	display: none;
 }
